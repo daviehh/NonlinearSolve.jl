@@ -232,11 +232,9 @@ function SciMLBase.__init(prob::NonlinearProblem{uType, iip}, alg::TrustRegion,
     u_elType = eltype(u)
     max_trust_radius = u_elType(alg.max_trust_radius)
     initial_trust_radius = u_elType(alg.initial_trust_radius)
-
     if iszero(max_trust_radius)
         max_trust_radius = max(norm(fu), maximum(u) - minimum(u))
     end
-
     if iszero(initial_trust_radius)
         initial_trust_radius = max_trust_radius / 11
     end
