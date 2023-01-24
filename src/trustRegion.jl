@@ -172,7 +172,8 @@ mutable struct TrustRegionCache{iip, fType, algType, uType, resType, pType,
                                    r::floatType) where {iip, fType, algType, uType,
                                                         resType, pType, INType,
                                                         tolType, probType, ufType, L,
-                                                        jType, JC, floatType, trustType}
+                                                        jType, JC, floatType, trustType
+                                                        }
         new{iip, fType, algType, uType, resType, pType,
             INType, tolType, probType, ufType, L, jType, JC, floatType, trustType
             }(f, alg, u, fu, p, uf, linsolve, J,
